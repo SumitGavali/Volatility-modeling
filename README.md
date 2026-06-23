@@ -31,13 +31,9 @@ This project builds a complete volatility forecasting pipeline similar to workfl
 ---
 
 ## Dataset
-
 Source: Yahoo Finance
-
 Instrument: S&P 500 Index (^GSPC)
-
 Period: 2016 – 2026
-
 Frequency: Daily
 
 Observations: ~2,500 trading days
@@ -77,11 +73,9 @@ Observations: ~2,500 trading days
 ### Stationarity
 
 ADF Statistic = -15.92
-
 p-value < 0.001
 
 Result:
-
 Returns are stationary and suitable for volatility modeling.
 
 ---
@@ -89,11 +83,9 @@ Returns are stationary and suitable for volatility modeling.
 ### ARCH Effects
 
 LM Statistic = 810.52
-
 p-value < 0.001
 
 Result:
-
 Strong conditional heteroskedasticity detected.
 
 ---
@@ -101,15 +93,11 @@ Strong conditional heteroskedasticity detected.
 ### GARCH Parameters
 
 ω = 0.0371
-
 α = 0.1647
-
 β = 0.8052
-
 α + β = 0.9699
 
 Result:
-
 Market volatility exhibits strong persistence.
 
 ---
@@ -117,11 +105,9 @@ Market volatility exhibits strong persistence.
 ### Residual Diagnostics
 
 Residual Ljung-Box p-value = 0.67
-
 Squared Residual Ljung-Box p-value = 0.37
 
 Result:
-
 No significant autocorrelation remained after model fitting.
 
 ---
@@ -138,21 +124,48 @@ Result:
 
 EWMA achieved the strongest out-of-sample forecasting performance during the test period.
 
+### key note:- 
+here forecasting window is of 50 and rolling mean is 20 at very first while building this the graphs of forecast overlaps so i am not abe to make distinction betwee them.
 ---
 
 ## Visual Results
 
-### Volatility Clustering
+### Real data
 
-[Insert squared returns chart]
+<img width="825" height="372" alt="image" src="https://github.com/user-attachments/assets/ee6a560c-5b77-479c-9809-21cda2678534" />
+
+### Log return 
+<img width="824" height="498" alt="image" src="https://github.com/user-attachments/assets/bc5479f5-5749-4f85-a5aa-4632e5a89256" />
+
+### squared return
+<img width="825" height="371" alt="image" src="https://github.com/user-attachments/assets/38d46cc7-67f2-47db-be19-2f8442e2ec2a" />
+
+### adf test
+<img width="344" height="356" alt="image" src="https://github.com/user-attachments/assets/0511d828-b81d-4c75-8578-346e0247cfee" />
+
+<img width="574" height="651" alt="image" src="https://github.com/user-attachments/assets/086b7e57-a083-4492-9a07-89406d2c93ad" />
+
+here is the right choice of direction
+
+<img width="762" height="695" alt="image" src="https://github.com/user-attachments/assets/db589db5-207a-44cc-b758-ebc061b26893" />
+
+### GARCH result
+<img width="578" height="394" alt="image" src="https://github.com/user-attachments/assets/e0b3aacf-e7b9-4757-b38d-af21ed40bae3" />
 
 ### GARCH Conditional Volatility
+<img width="826" height="383" alt="image" src="https://github.com/user-attachments/assets/04fca76c-5bc9-4dc5-a0a9-762b60040566" />
 
-[Insert conditional volatility chart]
 
 ### Model Comparison
 
-[Insert Rolling vs EWMA vs GARCH chart]
+<img width="826" height="385" alt="image" src="https://github.com/user-attachments/assets/ec1cfa88-afd3-4ea7-86df-d27652d644db" />
+
+### forecasting on test data 2025-2026(mid june)
+<img width="826" height="362" alt="image" src="https://github.com/user-attachments/assets/ee48a0b5-bb0a-4771-9c9a-72cc21a01d91" />
+
+### Forecast errors
+<img width="823" height="355" alt="image" src="https://github.com/user-attachments/assets/ac1eceb9-89a6-4ba6-a1f0-f1123dab3bdd" />
+
 
 ---
 
@@ -172,17 +185,6 @@ Libraries:
 
 ---
 
-## Repository Structure
-
-```text
-data/
-notebooks/
-images/
-report/
-README.md
-```
-
----
 
 ## Future Work
 
