@@ -142,6 +142,7 @@ here forecasting window is of 50 and rolling mean is 20 at very first while buil
 
 ### adf test
 <img width="344" height="356" alt="image" src="https://github.com/user-attachments/assets/0511d828-b81d-4c75-8578-346e0247cfee" />
+<br>
 
 <img width="574" height="651" alt="image" src="https://github.com/user-attachments/assets/086b7e57-a083-4492-9a07-89406d2c93ad" />
 
